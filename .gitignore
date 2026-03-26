@@ -1,3 +1,84 @@
+# ----------------------
+# OS files
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# Logs
+# ----------------------
+*.log
+logs/
+
+# ----------------------
+# Environment files
+# ----------------------
+.env
+.env.*
+*.env
+
+# ----------------------
+# Dependency folders
+# ----------------------
+node_modules/
+venv/
+env/
+__pycache__/
+
+# ----------------------
+# Python
+# ----------------------
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# ----------------------
+# Build / dist
+# ----------------------
+dist/
+build/
+*.egg-info/
+
+# ----------------------
+# IDE / Editor
+# ----------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------
+# Temporary files
+# ----------------------
+*.tmp
+*.temp
+*.bak
+
+# ----------------------
+# Coverage / testing
+# ----------------------
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ----------------------
+# Jupyter Notebook
+# ----------------------
+.ipynb_checkpoints/
+
+# ----------------------
+# Mac / Linux hidden
+# ----------------------
+.*
+!.gitignore
+
+# ----------------------
+# Backend (IMPORTANT)
+# ----------------------
+BackEnd/chroma_db/
+BackEnd/path_to_chroma_embeddings/
+BackEnd/uploads/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
