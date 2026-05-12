@@ -46,7 +46,18 @@ def search_documents(query_embedding, k=3):
         n_results=k
     )
 
+
+
     # Flatten the result
     retrieved = [doc for sublist in results["documents"] for doc in sublist]
 
     return retrieved
+
+def reset_collection():
+    global collection
+
+    client.delete_collection(COLLECTION_NAME)
+
+    collection = client.create_collection(name=COLLECTION_NAME)
+
+    print("Collection reset successful")

@@ -5,6 +5,7 @@ from fastapi import APIRouter, UploadFile, File, HTTPException
 from pydantic import BaseModel
 import shutil
 from services.document_service import chat_history
+from services.vector_store import reset_collection
 
 # ---------------- Import from services -----------------
 from services.document_service import (
@@ -44,13 +45,15 @@ def ask_question(request: QuestionRequest):
 
 @router.post("/reset-chat")
 def reset_chat():
-    """
-    Clears the chat history.
-    """
+
+    # Clear chat history
     chat_history.clear()
 
+    # Clear vector database
+    reset_collection()
+
     return {
-        "message": "Chat history cleared successfully"
+        "message": "Chat reset successful"
     }
 # ---------------- /upload-document endpoint -----------------
 @router.post("/upload-document")
